@@ -1,0 +1,36 @@
+.per-width(100);
+
+.per-width(@n, @i: 1) when (@i =< @n) {
+  .wd-per@{i} {
+    width: (@i * 1%);
+  }
+  .per-width(@n, (@i + 1));
+}
+
+.px-width(100);
+
+.px-width(@n, @i: 1) when (@i =< @n) {
+  .wd-px@{i} {
+    width: (@i * 10px);
+  }
+  .px-width(@n, (@i + 1));
+}
+
+.ellipsis{white-space: pre; overflow: hidden; text-overflow: ellipsis;}
+.clearafter{&:after{content: ""; display: table; clear: both;}}
+.icocenter{content: ""; height: 100%; display: inline-block; vertical-align: middle;}
+.fxdcenter(@pos){position:@pos; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+.para(@color, @font-size, @margin:0, @padding:0){color:@color; font-size: @font-size; line-height: (@font-size+1); margin:@margin; padding:@padding;}
+.trans(@speed: .2s) when (@speed = 0){ transition:initial; -o-transition:initial; -ms-transition:initial; -moz-transition:initial; -webkit-transition:initial;
+}
+.trans(@speed: .2s) when (@speed > 0){ transition: all @speed ease-in-out; -o-transition: all @speed ease-in-out; -ms-transition: all @speed ease-in-out; -moz-transition: all @speed ease-in-out; -webkit-transition: all @speed ease-in-out;
+}
+.borderRadius(@val:3px) when (@val > 0){border-radius: @val; -moz-border-radius: @val; -webkit-border-radius: @val; -ms-border-radius: @val; -o-border-radius: @val; }
+.anim(@anim:rotate,@speed:20s) when (@speed > 0){animation: @anim @speed linear infinite; -webkit-animation: @anim @speed linear infinite; -moz-animation: @anim @speed linear infinite; -ms-animation: @anim @speed linear infinite; -o-animation: @anim @speed linear infinite; }
+
+.placeholder(@color, @opacity: 50%){ 
+	&:-moz-placeholder { color: fade(@color, @opacity); opacity: 1;} 
+	&::-moz-placeholder { color: fade(@color, @opacity); opacity: 1;}
+	&:-ms-input-placeholder { color: fade(@color, @opacity);}
+  	&::-webkit-input-placeholder{ color: fade(@color, @opacity);}
+}

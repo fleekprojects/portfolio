@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'myicons';
+  src:  url('fonts/myicons.eot?mm812a');
+  src:  url('fonts/myicons.eot?mm812a#iefix') format('embedded-opentype'),
+    url('fonts/myicons.ttf?mm812a') format('truetype'),
+    url('fonts/myicons.woff?mm812a') format('woff'),
+    url('fonts/myicons.svg?mm812a#myicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'myicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-rewind:before {
+  content: "\e90a";
+}
+.icon-go:before {
+  content: "\e90a";
+}
+.icon-previous:before {
+  content: "\e90a";
+}
+.icon-back:before {
+  content: "\e90a";
+}
+.icon-old:before {
+  content: "\e90a";
+}
+.icon-play_arrow:before {
+  content: "\e900";
+}
+.icon-mobile:before {
+  content: "\e907";
+}
+.icon-mobile-phone:before {
+  content: "\e907";
+}
+.icon-tablet:before {
+  content: "\e908";
+}
+.icon-desktop:before {
+  content: "\e909";
+}
+.icon-search:before {
+  content: "\e901";
+}
+.icon-search-plus:before {
+  content: "\e902";
+}
+.icon-check:before {
+  content: "\e903";
+}
+.icon-close:before {
+  content: "\e904";
+}
+.icon-remove:before {
+  content: "\e904";
+}
+.icon-times:before {
+  content: "\e904";
+}
+.icon-minus:before {
+  content: "\e905";
+}
+.icon-chevron-down:before {
+  content: "\e906";
+}
